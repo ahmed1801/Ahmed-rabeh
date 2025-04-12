@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>السباحة</title>
+
+  <!-- روابط CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- تنسيق داخلي -->
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+
+  <!-- جافاسكربت -->
+  <script>
+    function toggleDetails(id) {
+      const element = document.getElementById(id);
+      element.style.display = (element.style.display === "block") ? "none" : "block";
+    }
+
+    function toggleMenu() {
+      const links = document.querySelector(".nav-links");
+      links.classList.toggle("active");
+    }
+  </script>
+</head>
+
+<body>
+
+<!-- شريط التنقل -->
+<nav class="navbar">
+  <div class="logo">السباحة</div>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <div class="nav-links">
+    <a href="counter.html">العداد</a>
+    <a href="saveResults.html">السجلات</a>
+    <a href="résultats.html">تحليل</a>
+  </div>
+  <div class="icon">
+    <img src="swimmer1.jpg" alt="أيقونة السباح" />
+  </div>
+  
+</nav>
+
+<!-- العرض الرئيسي -->
+<main class="presentation">
+  <h1>السباحة</h1>
+
+  <!-- فوائد السباحة -->
+  <section>
+    <h2 onclick="toggleDetails('benefitsDetails')">فوائد السباحة</h2>
+    <div id="benefitsDetails" class="details" style="display:none;">
+      <div class="details-item">
+        <img src="https://mediall1.com/images/Contents/1/1032008-3.jpg" alt="تقوية العضلات">
+        <div class="details-caption">تقوية العضلات وزيادة اللياقة البدنية</div>
+      </div>
+      <div class="details-item">
+        <img src="https://static.webteb.net/images/content/tbl_articles_article_19909_9496ae80a91-dc70-44aa-b273-32540913484d.jpg" alt="تحسين صحة القلب">
+        <div class="details-caption">تحسين صحة القلب والجهاز التنفسي</div>
+      </div>
+      <div class="details-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvXuhffQy562fKurttSAWFKu03qUdYO9R15A&s" alt="تخفيف التوتر">
+        <div class="details-caption">تخفيف التوتر والقلق</div>
+      </div>
+      <div class="details-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsDXS7FqRJlFFyW7YdVKEbN-h90mtx_ff8uQ&s" alt="تعزيز الثقة بالنفس">
+        <div class="details-caption">تعزيز الثقة بالنفس</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- أنواع السباحة -->
+  <section>
+    <h2 onclick="toggleDetails('types')">أنواع السباحة</h2>
+    <div id="types" class="details" style="display:none;">
+      <div class="details-item">
+        <img src="https://newsimg.bbc.co.uk/media/images/40790000/gif/_40790380_breast_stroke_anim.gif" alt="سباحة الصدر">
+        <div class="details-caption">سباحة الصدر</div>
+      </div>
+      <div class="details-item">
+        <img src="https://i.servimg.com/u/f35/14/11/55/98/backst10.gif" alt="سباحة الظهر">
+        <div class="details-caption">سباحة الظهر</div>
+      </div>
+      <div class="details-item">
+        <img src="https://blog.arenaswim.com/wp-content/uploads/2019/07/ARENA_butterfly_GIF-1.gif" alt="سباحة الفراشة">
+        <div class="details-caption">سباحة الفراشة</div>
+      </div>
+      <div class="details-item">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEXIqmbfQyWT_2tUZvElu4x_W0JKMObhD6rIcW0ZlV4D_NMifIQEH7-M0d8jINomYbj_qE3H2Wd6AcS-HjJVf1mmTtYSzmeT3kBVVEZqEd0uBOY6XHjrQn5pKymGoc1qFVso_hs1NjaKM/s1600/freestyle_muscles_FB.gif" alt="السباحة الحرة">
+        <div class="details-caption">السباحة الحرة</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- نصائح للمبتدئين -->
+  <section>
+    <h2 onclick="toggleDetails('tips')">نصائح للمبتدئين</h2>
+    <div id="tips" class="details" style="display:none;">
+      <div class="details-item">
+        <img src="https://i.ytimg.com/vi/nKonYWcbPJE/maxresdefault.jpg" alt="تنفس صحيح">
+        <div class="details-caption">تعلم تقنيات التنفس الصحيحة.</div>
+      </div>
+      <div class="details-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-hevNG09BswEryWv2C0XbcikP8q2-7bKHg&s" alt="تدريبات أساسية">
+        <div class="details-caption">البدء بالتدريبات الأساسية.</div>
+      </div>
+      <div class="details-item">
+        <img src="https://cdn-ir1.behzi.net/article/cover/1718529865039.jpg" alt="معدات سلامة">
+        <div class="details-caption">استخدام معدات السلامة مثل الطوافات.</div>
+      </div>
+      <div class="details-item">
+        <img src="ah.jpg" alt="مدرب مختص">
+        <div class="details-caption">التمرن تحت إشراف مدرب مختص.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- الخاتمة -->
+  <section>
+    <h2 onclick="toggleDetails('conclusion')">الخاتمة</h2>
+    <div id="conclusion" class="details" style="display:none;">
+      <p>السباحة نشاط ممتع ومفيد للجميع، بغض النظر عن العمر أو المستوى البدني. لذا، لا تتردد في تجربتها والاستفادة من فوائدها العديدة.</p>
+      <img src="swimmer1.jpg" alt="الخاتمة عن السباحة" />
+    </div>
+  </section>
+</main>
+
+<!-- التذييل -->
+<footer class="footer">
+  &copy; 2025 عرض تقديمي عن السباحة
+</footer>
+
+
+<!-- Service Worker -->
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(reg => console.log("Service Worker مسجل:", reg))
+      .catch(err => console.log("فشل تسجيل Service Worker:", err));
+  }
+</script>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+</body>
+</html>

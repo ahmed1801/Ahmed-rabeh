@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جهاز توقيت للسباحين</title>
+    <link rel="stylesheet" href="counter.css">
+</head>
+<body>
+    <audio id="startSound" src="sound.mp3" preload="auto"></audio>
+
+    <h2>جهاز توقيت للسباحين</h2>
+    
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>رقم السباح</th>
+                    <th>الوقت</th>
+                </tr>
+            </thead>
+            <tbody id="swimmerTable"></tbody>
+        </table>
+
+        <div class="buttons">
+            <div class="timer-display" id="liveTimer">00:00.00</div>
+            <button class="start-btn" onclick="startRace()">ابدأ السباق</button>
+           <!-- <label for="swimType">نوع السباحة:</label> -->
+        <select id="swimType">
+            <option value="سباحة حرة">سباحة حرة</option>
+            <option value="الصدر">سباحة صدر</option>
+            <option value="الظهر">سباحة ظهر</option>
+            <option value="الفراشة">سباحة فراشة</option>
+        </select>
+        <!--<label for="distance">المسافة:</label> -->
+        <select id="distance">
+            <option value="50م">50م</option>
+            <option value="100م">100م</option>
+            <option value="200م">200م</option>
+            <option value="400م">400م</option>
+        </select>
+        
+        <!--<label for="winnerName">اسم الفائز الأول:</label> -->
+        <input type="text" id="winnerName" placeholder="اكتب اسم الفائز">
+        <button class="save-btn" onclick="saveResults()">حفظ النتائج</button>
+        <button class="reset-btn" onclick="resetRace()">إعادة ضبط</button>
+        <button class="back-btn" onclick="goBack1()"> الصفحة الرئيسية</button>
+
+        </div>
+        
+    </div>
+
+        <div class="slider-container">
+            <div class="slider">
+                <img src="swimmer1.jpg" alt="سباح 1">
+                <img src="swimmer2.jpg" alt="سباح 2">
+                <img src="swimmer3.jpg" alt="سباح 3">
+                <img src="swimmer4.jpg" alt="سباح 4">
+                <img src="swimmer5.jpg" alt="سباح 5">
+                <img src="swimmer6.jpg" alt="سباح 6">
+                
+            </div>
+        </div>
+    <!-- قسم لإدخال نوع السباحة واسم الفائز -->
+    
+
+    
+
+    <script src="counter.js"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+
+      /* إعدادات عامة للصفحة */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    direction: rtl;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* عنوان الصفحة */
+h2 {
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+/* حاوية رئيسية */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+/* تحسين الجدول */
+table {
+    width: 50%;
+    max-width: 500px;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+td:first-child, th:first-child {
+    width: 70px;
+}
+
+/* تنسيق الأزرار */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+button {
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    width: 140px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* تحسين ألوان الأزرار */
+.start-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.reset-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.save-btn {
+    background-color: #17a2b8;
+    color: white;
+}
+.back-btn {
+    background-color: #ec8e22;
+    color: white;
+}
+
+/* تأثير عند تمرير الفأرة */
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* عداد الوقت */
+.timer-display {
+    font-size: 60px;
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+/* تحسين إدخال البيانات */
+.extra-info {
+    margin-top: 10px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.extra-info label {
+    font-weight: bold;
+}
+
+.extra-info select,
+.extra-info input {
+    font-size: 16px;
+    padding: 8px;
+    width: 90%;
+    max-width: 300px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease-in-out;
+}
+
+.extra-info select:focus,
+.extra-info input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* تحسين شريط الصور المتحركة */
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 5px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    border-radius: 8px;
+}
+
+.slider {
+    display: flex;
+    gap: 15px;
+    animation: slide 10s linear infinite;
+}
+
+.slider img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #007BFF;
+}
+
+/* تحسين حركة الشريط */
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* تحسين التوافق مع الهواتف */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        width: 50%;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    button {
+        width: 120px;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .timer-display {
+        font-size: 50px;
+    }
+
+    .extra-info select,
+    .extra-info input {
+        font-size: 12px;
+        width: 80%;
+        outline: none;
+    }
+
+    .slider img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+   

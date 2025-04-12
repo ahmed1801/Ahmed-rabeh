@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نتائج السباق</title>
+  <link rel="stylesheet" href="résultats.css">
+  
+</head>
+<body>
+  <h2>نتائج السباق</h2>
+
+  <!-- فلاتر البحث -->
+  <div class="filter-container">
+    <select id="swimmerFilter" onchange="filterResults()">
+      <option value="">اختر اسم السباح</option>
+    </select>
+    <select id="swimTypeFilter" onchange="filterResults()">
+      <option value="">اختر نوع السباق</option>
+    </select>
+    <select id="distanceFilter" onchange="filterResults()">
+      <option value="">اختر المسافة</option>
+    </select>
+  </div>
+
+  <!-- عرض النتائج -->
+  <div id="resultsContainer"></div>
+
+  
+  <button class="back-btn" onclick="goBack1()">العودة الى الصفحة الرئيسية</button>
+
+  <script src="résultats.js"></script>
+</body>
+</html>
